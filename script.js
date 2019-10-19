@@ -2,31 +2,47 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz",
   uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numbers = "0123456789",
   specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
-  lowercaseInput = document.getElementById("lowercase"),
-  uppercaseInput = document.getElementById("uppercase"),
-  punctuationInput = document.getElementById("punctuation"),
-  numbersInput = document.getElementById("numbers"),
-  lengthInput = document.getElementById("length"),
-  passwordField = document.getElementById("pass-field"),
   generateButton = document.getElementById("generate"),
-  copyButton = document.getElementById("copy"),
-  plength,
-  userPassword,
-  passwordCharSet;
+  copyButton = document.getElementById("copy");
 
   generateButton.addEventListener("click", generate);
 
   function generate() {
-    var passLength = prompt("How many characters do you want?");
+    var passLength = prompt("How many characters do you want?"),
+        isBad = true,
+        charPicked = false,
+        upperPicked = true,
+        lowerPicked = true,
+        numPicked = true,
+        specialPicked = true;
 
     // alert("You picked " + charNum);
+    do {
+        if (passLength > 8 && passLength < 128) {
+            //determine if length is good
 
-    if (passLength > 8 && passLength < 128) {
-        
-        // alert("length is good")
+            isBad = false;
+        }
+        else {
+            alert("Password length must be between 8 and 128 characters.");
+            passLength = prompt("How many characters do you want?");
+        }
     }
-    else {
-        alert("Password length must be between 8 and 128 characters.");
+    while (isBad);
+    
+    while (!charPicked) {
+        upperPicked = confirm("Do you want uppercase letters?");
+        
+        lowerPicked = confirm("Do you want lowercase letters?");
+
+        numPicked = confirm("Do you want numbers?");
+
+        specialPicked = confirm("Do you want special characters?");
+
+        if (upperPicked || lowerPicked || numPicked || specialPicked) {
+            charPicked = true;
+        }
+
     }
     
 
