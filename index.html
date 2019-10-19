@@ -9,48 +9,52 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-md navbar-dark justify-content-center" style="background-color: #BF3FBF;">
-            <span class="navbar-brand mb-0 ml-0 mr-0 h1 container">
+        <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #21b079;">
+            <span class="navbar-brand navbar-logo mx-auto">
                 <h1>
                     Password Genie
                 </h1>
             </span>
         </nav>
         <div class="container mt-4">
-            <h2>What's the Secret Password???</h2>
+            <h2 class="text-center">What's the Secret Password???</h2>
             <div class="row">
-                <div class="col-12 col-md-10 justify-content-center">
+                <div class="col-12 col-md-10 offset-md-1">
                     <p>
                         Everything has a password these days, even at the office. While your birthday and kids' names (fur-children included!) are easy to remember, they don't keep your information safe. 
                         Surely, you've run out of ways to capitalize random letters and switch around the digits of birthdays by now, but nonetheless, it's time for a new password.  
                         We still need to keep your information and company information safe from hackers. 
                     </p>
                     <p>
-                        We'll even help you out and save you some valuable time & brain power. Input the parameters desired and our company genie will work some magic and give you a shiny new password below:
+                        We'll even help you out and save you some valuable time & brain power. Input your desired parameters and our company genie will work some magic to give you a shiny new password below:
                     </p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-10 ml-3 ml-md-2 mr-3 mr-md-2 justify-content-center">
-                    <form>
-
-                    </form>
+                <div class="col-10 col-md-8 offset-1 offset-md-2">
+                    <div class="jumbotron jumbotron-fluid text-center">
+                        <div class="container">
+                            <h1 class="display-4">Your new password is...</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-6 col-md-5 col-lg-4">
+                <div class="col-4 offset-3">
+                        <button type="button" id="generate" class="btn generate btn-secondary btn-lg">Generate Password</button>                </div>
+                <div class="col-4">
+                        <button type="button" id="copy" class="btn copy btn-success btn-lg">Copy to clipboard</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1">
                     <p>
-                        <strong>ProTip:</strong> You should make a note of your new super secret password; you have enough to remember and we won't know what it is. Copy it to your clipboard now and put it somewhere safe!
+                        <mark>ProTip:</mark> You should make a note of your new super secret password; you have enough to remember and we won't know what it is. Copy it to your clipboard now and put it somewhere safe!
                     </p>
-                </div>
-                <div class="col-5 col-md-4 col-lg-3">
-                    <img class="img-fluid" src="http://placehold.it/400x400" alt="area placeholder">
                 </div>
             </div>
         </div>
-
-        <footer class="mt-2 text-center">Copyright &copy; 2019</footer>
-
 
 
     <!-- Optional JavaScript -->
