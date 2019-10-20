@@ -50,7 +50,10 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz",
         }
     }
     makePass(upperPicked, lowerPicked, numPicked, specialPicked, passLength);
+    // computer will display the password for the user
     document.getElementById("password").innerHTML = password;
+    // enable copy button once password appears
+    enableCopy();
 }
 
 // computer will create a combo of random choices of the chosen character types until length desired is accomplished
@@ -77,7 +80,11 @@ function makePass (upperPicked, lowerPicked, numPicked, specialPicked, passLengt
 }
 
   //copy to clipboard button enabled
-  
- // activate copy function
+  function enableCopy () {
+    if (generate) {
+        document.getElementById("copy").removeAttribute("disabled");
+    }
+  }
+ // copy function
 
   // computer copies password to clipboard
