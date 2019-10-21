@@ -1,15 +1,15 @@
 var lowercase = "abcdefghijklmnopqrstuvwxyz",
-  uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-  numbers = "0123456789",
-  specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
-  password = "",
-  generateButton = document.getElementById("generate"),
-  copyButton = document.getElementById("copy");
+uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+numbers = "0123456789",
+specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
+password = "",
+generateButton = document.getElementById("generate"),
+copyButton = document.getElementById("copy");
 
 // initiate generate function with button click
-  generateButton.addEventListener("click", generate);
+generateButton.addEventListener("click", generate);
 
-  function generate() {
+function generate() {
     var passLength = prompt("How many characters do you want?"),
         isBad = true,
         charPicked = false,
@@ -31,7 +31,7 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz",
         }
     }
     while (isBad);
-    
+
     // asking the user which character types desired & validating at least one was chosen
     while (!charPicked) {
         upperPicked = confirm("Do you want uppercase letters?");
@@ -49,9 +49,12 @@ var lowercase = "abcdefghijklmnopqrstuvwxyz",
             alert("You must choose at least one type of character.");
         }
     }
+    
     makePass(upperPicked, lowerPicked, numPicked, specialPicked, passLength);
+
     // computer will display the password for the user
     document.getElementById("password").innerHTML = password;
+
     // enable copy button once password appears
     enableCopy();
 }
@@ -76,15 +79,23 @@ function makePass (upperPicked, lowerPicked, numPicked, specialPicked, passLengt
             password+= specialChar.charAt(Math.floor(Math.random()*specialChar.length));
         }
     }
+
     return password;
 }
 
-  //copy to clipboard button enabled
-  function enableCopy () {
+//copy to clipboard button enabled
+function enableCopy () {
     if (generate) {
         document.getElementById("copy").removeAttribute("disabled");
     }
-  }
- // copy function
+}
 
-  // computer copies password to clipboard
+// initiate copy function by clicking Copy button
+copyButton.addEventListener("click", copy);
+
+// computer copies password to clipboard
+function copy () {
+    var copyPass = document.getElementById("password");
+    copyPass.select();
+    document.execCommand("copy");
+}
