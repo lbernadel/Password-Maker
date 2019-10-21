@@ -1,6 +1,6 @@
 # [Password-Maker](https://lbernadel.github.io/Password-Maker/)
 
-![Webpage](/password-page.jpg)
+![Password-Maker Screenshot](password-page.jpg)
 
 ## Description
 The purpose of this project was to create a random password generating application for company with employees who have access to sensitive company information. The application prompts the user for selection of the following criteria:
@@ -43,6 +43,10 @@ Using JS + HTML DOM:
 - https://www.w3schools.com/js/js_htmldom_html.asp
 - https://www.w3schools.com/jsref/met_element_removeattribute.asp
 - https://stackoverflow.com/questions/27238510/bootstrap-enable-button-on-input
+
+Text Overflow issue:
+- https://developer.mozilla.org/en-US/docs/Web/CSS/max-height
+- https://developer.mozilla.org/en-US/docs/Web/CSS/word-break
 
 Enabling Clipboard Use:
 - https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
