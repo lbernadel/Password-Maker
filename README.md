@@ -1,6 +1,6 @@
 # [Password-Maker](https://lbernadel.github.io/Password-Maker/)
 
-![Password-Maker Screenshot](password-page.jpg)
+![Password-Maker Screenshot](password-page.JPG)
 
 ## Description
 The purpose of this project was to create a random password generating application for company with employees who have access to sensitive company information. The application prompts the user for selection of the following criteria:
@@ -15,7 +15,7 @@ The purpose of this project was to create a random password generating applicati
 The application validates that the user choose a length within range and at least one character type prior to generating a random password. Once a password is created, it appears and the user is able to copy it to their clipboard to save elsewhere.
 
 ## Challenges
-This was harder than I thought. I understood the basics of what to do, but putting it together was another story. I do feel like I understand more about how to use functions in JavaScript now. It can still be quite confusing though. The only thing I couldn't figure out was how to generate and display a new password without having to refresh the page. It was confusing to figure out where I went wrong in the code without inserting temporary debugging code, but eventually I got it. Need to remember to test in smaller pieces.
+This was harder than I thought. I understood the basics of what to do, but putting it together was another story. I do feel like I understand more about how to use functions in JavaScript now. It can still be quite confusing though. The only things I couldn't figure out was how to generate and display a new password without having to refresh the page and why my copy to clipboard function was working and then not working randomly (however, that function was technically a bonus). It was confusing to figure out where I went wrong in the code without inserting temporary debugging code, but eventually I got it. Need to remember to test in smaller pieces.
 
 I am still staying up at odd hours to complete things until they work. One day, I'll figure out how to stop doing that.
 
