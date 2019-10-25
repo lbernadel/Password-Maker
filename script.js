@@ -5,7 +5,6 @@ specialChar = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~",
 password = "",
 generateButton = document.getElementById("generate"),
 copyButton = document.getElementById("copy");
-// copyPass = document.getElementsByClassName("password").innerText;
 
 
 // initiate generate function with button click
@@ -96,11 +95,10 @@ function enableCopy () {
 copyButton.addEventListener("click", copy);
 
 // computer copies password to clipboard
-function copy () {
-    // var password = document.getElementsByClassName("password").innerHTML;
+function copy (password) {
     if (password) {
-        var copyPass = document.getElementById("password").innerText;
+        var copyPass = document.getElementById("password").textContent;
+        copyPass.execCommand("contentReadOnly", false)
         document.execCommand("copy");
     }
-    return console.log(copyPass);
 }
